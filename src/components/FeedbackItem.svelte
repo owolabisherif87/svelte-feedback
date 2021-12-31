@@ -11,7 +11,9 @@
   const handleDelete = (id) => {
     // dispatcher("delete-feedback", id);
 
-    feedbackStore.update((currentFeedback) => currentFeedback.filter((item) => item.id != id));
+    feedbackStore.update((currentFeedback) =>
+      currentFeedback.filter((item) => item.id != id)
+    );
   };
 </script>
 
@@ -20,7 +22,7 @@
     <div class="num-display">
       {feedback.rating}
     </div>
-    <button class="close" on:click={() => handleDelete(feedback.id)}>X</button>
+    <button class="close" on:click={() => handleDelete(feedback.id)}>❌</button>
     <p class="text-display">
       {feedback.text}
     </p>
